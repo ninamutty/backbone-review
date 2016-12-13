@@ -4,6 +4,26 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <main>
+      <h2> List </h2>
+      <ul id="trip-cards"></ul>
+      <section id="trip-details"></section>
+    </main>
+
+    <!-- Underscore Templates -->
+    <script type="text/template" id="tmpl-trip-card">
+      <li>
+        <h4><%- name %>test</h4>
+      </li>
+    </script>
+
+    <script type="text/template" id="tmpl-trip-details">
+      <h3><%- name %></h3>
+      <h4><%- continent %></h4>
+      <h4><%- cost %></h4>
+    </script>
+
+
     <script src="/app.bundle.js" charset="utf-8"></script>
   </body>
 </html>
