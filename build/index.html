@@ -5,7 +5,7 @@
   </head>
   <body>
     <main>
-      <h2> List </h2>
+      <h2> Trips  </h2>
       <ul id="trip-cards"></ul>
       <section id="trip-details"></section>
     </main>
@@ -13,7 +13,9 @@
     <!-- Underscore Templates -->
     <script type="text/template" id="tmpl-trip-card">
       <li>
-        <h4><%- name %>test</h4>
+        <h3><%- name %></h3>
+        <h4><%- continent %></h4>
+        <h4>$<%- cost %></h4>
       </li>
     </script>
 
