@@ -13,12 +13,12 @@ const ApplicationView = Backbone.View.extend({
   },
 
   render: function() {
-    const tripListView = new TripListView({
+    const tripsView = new TripListView({
       //check that .tripList is right
-      model: this.model.tripList,
+      model: this.model.tripsList,
       el: this.$('main')
     })
-    tripListView.render();
+    tripsView.render();
 
     return this;
   }

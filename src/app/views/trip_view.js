@@ -2,9 +2,10 @@ import _ from 'underscore';
 import Backbone from 'backbone';
 
 
-const TripView = Backbone.view.extend({
-  initialize: fuction() {
-    this.template = _.template(Backbone.$('#tmpl-contact-card').html());
+const TripView = Backbone.View.extend({
+  initialize: function() {
+    this.template = _.template(Backbone.$('#tmpl-trip-card').html());
+
   },
 
   render: function(){

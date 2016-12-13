@@ -1,5 +1,5 @@
 import Application from 'app/models/application';
-import AppicationView from 'app/views/application_view';
+import ApplicationView from 'app/views/application';
 
 var application = new Application({
   trips: [
