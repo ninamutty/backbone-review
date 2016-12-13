@@ -1,22 +1,56 @@
 # Backbone Review
 
+Review what we have learned so far with Backbone by digging into the completed Backbone application version of Trek, included in this repo. 
+
+**Fork and clone this repository to follow along.** 
 
 ## Review Components
-- [Models](#models)
-- [Collections](#collections)
-- [Views](#views)
+Below are the Backbone components we have focused on to build our single page applications. 
+
+- [Model](#models)
+- [Collection](#collections)
+- [View](#views)
 - [Events](#events)
 
-### Models
+### Model
+Models are ... blah blah. Brief info on what we've covered so far
 
-### Collections
+[Backbone.model Documentation](http://backbonejs.org/#Model)
 
-### Views
+### Collection
+
+[Backbone.collection Documenation](http://backbonejs.org/#Collection)
+
+### View
+
+[Backbone.view Documenation](http://backbonejs.org/#View)
 
 ### Events
 
+[Backbone.events Documenation](http://backbonejs.org/#Events)
 
-## Rendering Views
+**Activity:** List all the components of Trek
+
+## How the Components Interact with Each Other
+
+### Rendering Views
+Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the 
 
 
-## Tracing Events
+trip view 
+trip_list view
+app view
+
+**Activity:** Views Responsibility
+
+### Tracing Functionality
+
+**Activity:** 
+Use the worksheet that corresponds to all the 
+Cut out the squares and put the segments of code in order in which they are ran, based on that event happening
+
+- On page load
+- When Button, 'See All Trips', is clicked
+- When button, 'Make Reservation', is clicked
+
+### Tracing Events
