@@ -37,9 +37,9 @@ Models are ... blah blah. Brief info on what we've covered so far
 Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the 
 
 
-trip view 
-trip_list view
-app view
+- trip view 
+- trip_list view
+- app view
 
 **Activity:** Views Responsibility
 
