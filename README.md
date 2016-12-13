@@ -15,11 +15,13 @@ Below are the Backbone components we have focused on to build our single page ap
 - [Events](#events)
 
 ### Model
-Models are ... blah blah. Brief info on what we've covered so far
+Models are
 
+The model will hold our applications business logic code.
 [Backbone.model Documentation](http://backbonejs.org/#Model)
 
 ### Collection
+Handles a group of related models.
 
 [Backbone.collection Documenation](http://backbonejs.org/#Collection)
 
@@ -35,7 +37,7 @@ It gives you access to jquery methods like `.show()`, `.hide()` and `.addClass()
 [Backbone.view Documenation](http://backbonejs.org/#View)
 
 ### Events
-Defined inside of Backbone.views,  a view listens to the model "change" events, and react or re-render themselves appropriately.
+Defined inside of Backbone.views
 
 
 

@@ -5,8 +5,8 @@ import TripView from 'app/views/trip_view';
 const TripListView = Backbone.View.extend({
   initialize: function(){
     this.detailsTemplate = _.template(Backbone.$('#tmpl-trip-details').html());
-    this.detailsModal = this.$('#trip-details');
-    this.detailsModal.hide();
+    // this.detailsModal = this.$('#trip-details');
+    // this.detailsModal.hide();
 
   },
 
