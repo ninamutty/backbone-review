@@ -8,29 +8,26 @@ const TripListView = Backbone.View.extend({
     this.detailsModal = this.$('#trip-details');
     this.detailsModal.hide();
 
-    this.listenTo(this.model, 'update', this.render)
   },
 
-  showCard: function(card){
-    // console.log(card.model.attributes);
-    const cardDetails = this.detailsTemplate(card.model.attributes);
-    this.detailsModal.html(cardDetails);
-    this.detailsModal.show();
-  },
+  // showCard: function(card){
+  //   // console.log(card.model.attributes);
+  //   const cardDetails = this.detailsTemplate(card.model.attributes);
+  //   this.detailsModal.html(cardDetails);
+  //   this.detailsModal.show();
+  // },
 
   render: function() {
-    const cardList = this.$('#trip-cards');
+    const cardList = Backbone.$('#trip-cards');
     cardList.empty();
 
     const self = this;
     this.model.forEach(function(trip) {
-
       const card = new TripView({
         model: trip
       });
-      self.listenTo(card, 'select', self.showCard);
+
       cardList.append(card.render().$el);
-      console.log(cardList);
     })
   }
 
