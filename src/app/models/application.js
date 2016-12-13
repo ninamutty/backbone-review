@@ -5,7 +5,7 @@ import TripList from 'app/collections/trips_list';
 const Application = Backbone.Model.extend({
   initialize: function(options) {
     var trips = options.trips.map(function(attrs){
-      return new
+      return new Trip(attrs);
     });
     this.tripsList = new TripList(trips);
   }
