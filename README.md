@@ -1,11 +1,11 @@
 # Backbone Review
 
-Review what we have learned so far with Backbone by digging into the completed Backbone application version of Trek, included in this repo. 
+Review what we have learned so far with Backbone by digging into the completed Backbone application version of Trek, included in this repo.
 
-**Fork and clone this repository to follow along.** 
+**Fork and clone this repository to follow along.**
 
 ## Review Components
-Below are the Backbone components we have focused on to build our single page applications. 
+Below are the Backbone components we have focused on to build our single page applications.
 
 - [Model](#models)
 - [Collection](#collections)
@@ -34,23 +34,27 @@ Models are ... blah blah. Brief info on what we've covered so far
 ## How the Components Interact with Each Other
 
 ### Rendering Views
-Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the 
 
 
-- trip view 
+Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the
+
+
+- trip view
 - trip_list view
 - app view
 
 **Activity:** Views Responsibility
 
-### Tracing Functionality
+### Tracing Events
 
-**Activity:** 
-Use the worksheet that corresponds to all the 
+**Activity:**
+Use the worksheet that corresponds to all the
 Cut out the squares and put the segments of code in order in which they are ran, based on that event happening
 
-- On page load
 - When Button, 'See All Trips', is clicked
 - When button, 'Make Reservation', is clicked
 
-### Tracing Events
+### Initial Page Load
+When the page initially loads, there is a lot of code in various parts of our application that are depended on to make sure it all comes together.
+
+- On page load
