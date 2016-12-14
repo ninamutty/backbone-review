@@ -1,17 +1,19 @@
 # Backbone Review
 
-Review what we have learned so far with Backbone by digging into the completed Backbone application version of Trek, included in this repo.
+Review what we have learned so far with Backbone by going over the essential components and
+
+This repo includes a completed Backbone application version of Trek that we will refer to for the activities.
 
 **Fork and clone this repository to follow along.**
 
 ***
 
 ## 1) Review Components
-Below are the Backbone components we have focused on to build our single page applications.
+Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
-- [Model](#models)
-- [Collection](#collections)
-- [View](#views)
+- [Model](#model)
+- [Collection](#collection)
+- [View](#view)
 - [Events](#events)
 
 ### Model
@@ -27,19 +29,15 @@ Handles a group of related models.
 
 ### View
 
-**.el**
-A view's .el property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
-
-**$el**
-A cached jquery object so that you
+**Notes on el and $el:**
+- **el:** A view's .el property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
+- **$el:** A cached jquery object so that you
 It gives you access to jquery methods like `.show()`, `.hide()` and `.addClass()`
 
 [Backbone.view Documenation](http://backbonejs.org/#View)
 
 ### Events
 Defined inside of Backbone.views
-
-
 
 [Backbone.events Documenation](http://backbonejs.org/#Events)
 
@@ -49,6 +47,9 @@ List all of the components
 ***
 
 ## 2) Review How the Components Interact with Each Other
+Each component is responsible for specific functionality of our application. 
+
+The below activities practice understanding how the components interact with each other.
 
 - [Rendering Views](#rendering-views)
 - [Tracing Events](#tracing-events)
