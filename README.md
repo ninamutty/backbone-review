@@ -86,15 +86,17 @@ Notice that our views only directly interact with DOM elements inside their area
 
 ### Models
 
-Right now our models & collections have done very little. We have used them to set defaults.
+Right now our models & collections have done very little. We have used them to set defaults.  Our Contact Model only stores contact information, no business logic or functions.  
 
-Then can also connect to APIs CRUD operations, provide business logic and let Views know when the data has changed with Events.  
+Models can also connect to APIs CRUD operations, provide business logic and let Views know when the data has changed with Events.  
 
 We will utilize them a lot more with Tic-Tac-Toe, and that lesson will come on Monday.  Yippie!
 
 ### Collections
 
 Collections are ordered groups of Models, they normally communicate with APIs for CRUD operations and let a view know of changes with the `add`, `update` and other events.  
+
+Our Rolodex here only uses the Collection's Eventing in this application.  
 
 ### That Other stuff
 Because our Backbone application relies on a few other libraries to get it's gear'a'grinding, we have a json file that keeps track of those libraries and will include them into our project when we run `npm install`.
