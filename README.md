@@ -56,20 +56,33 @@ List all of the components
 ## 2) How we have structured our Backbone applications
 The point of Backbone is to provide a very intentional structure to our front-end code, so that we know where to find the code that is handling the specific functionality of our application.
 
-With Backbone being a less opinionated library/framework, it also has less rules and conventions on how to organize your application and where you implement specific functionality.  We've structured our App as follows.  
+With Backbone being a less opinionated library/framework, it also has less rules and conventions on how to organize your application and where you implement specific functionality.  
 
+We'll take a look at a sample Rolodex solution.  
+
+Fork & Clone this [repository.](https://github.com/Hamled/rolodex/tree/Hamled/impl).
+
+Then execute:
+```bash
+$  git fetch
+$  git checkout impl
+```
+
+To get our solution to Rolodex for examination.  
 
 ### App.js
 App.js is our starting file for execution.  It creates the models & our ApplicationView to start the page.  
 
 ### Views
 - **ApplicationView** was the most arbitrary. Why is it there?
-  - The ApplicationView controls the whole viewport and handles the form for creating new trips.
-- **TripListView** 
-  - The TripListView manages the list of trips and listens for events on the collection and when individual trips are selected.  When they are it shows the individual trip's details.  
-- **TripView**
-  - A TripView renders one trip Model using an underscore template.  
+  - The ApplicationView controls the whole viewport and handles the form for creating new Contacts.
+- **RolodexView** 
+  - The RolodexView manages the list of Contacts and listens for events on the collection and when individual cards are selected.  When a card is selected it triggers an event which the Rolodex listens to.  Then the Rolodex updates the modal to show the contact details.  
+- **ContactView**
+  - A ContactView renders one Contact Model using an underscore template.  
 
+
+Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular <DIV> element, while the RolodexView does not interact with the form.  
 
 ### Models
 
