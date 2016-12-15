@@ -12,10 +12,6 @@ const TripListView = Backbone.View.extend({
     this.listenTo(this.model, 'update', this.render);
   },
 
-  events: {
-    'click .trip-card': 'showDetails'
-  },
-
   showDetails: function(card){
 
     const cardDetails = this.detailsTemplate(card.model.attributes);
