@@ -44,10 +44,50 @@ Defined inside of Backbone.views
 **Activity:** List all the components of Trek
 List all of the components
 
+
 ***
 
-## 2) Review How the Components Interact with Each Other
-Each component is responsible for specific functionality of our application. 
+## 2) How we have structured our Backbone applications
+The point of backbone is to provide a very intentional structure to our front-end code, so that we know where to find the code that is handling the specific functionality of our application.
+
+With Backbone being a less opinionated library/framework, it also has less rules and conventions on
+
+
+### App.js
+
+
+### Views
+- **application_view** was the most arbitrary. Why is it there?
+- **contact_view**
+- **rolodex_view**
+
+
+### Models
+
+Right now our models have done very little. We have used them to set defaults.
+
+Then can also...
+
+We will utilize them a lot more with Tic-Tac-Toe, and that lesson will come on Monday.
+
+### Collections
+
+
+### That Other stuff
+Because our Backbone application relies on a few other libraries to get it's gear'a'grinding, we have a json file that keeps track of those libraries and will include them into our project when we run `npm install`.
+
+To add more libraries, or to see which ones are already included, open the `package.json` file and look under `"devDependencies": {}`
+
+If this process sounds familiar, it's because it's basically the same as having a gem file in rails and running *'bundle install'*.
+
+- **Webpack**
+
+
+
+***
+
+## 3) Review How the Components Interact with Each Other
+Each component is responsible for specific functionality of our application. These components rely on each other, which can quickly complicate how data flows through our application.
 
 The below activities practice understanding how the components interact with each other.
 
@@ -57,9 +97,9 @@ The below activities practice understanding how the components interact with eac
 
 ### Rendering Views
 
-**HTML has hierarchy** When an HTML element is nested inside of another element, the outer-most element has a higher hierarchy.
+**The structure of our HTML has hierarchy** When an HTML element is nested inside of another element, the outer-most element has a higher hierarchy. That outer-element acts as a container for it's inner-elements.
 
-With Backbone Views, some views will be responsible for other views and act as a container with hierarchy over
+Some backbone views will be responsible for other views and act as a container with hierarchy over the inner-elements that are generated from the views.
 
 For example, in the Rolodex project, the Rolodex view was responsible for rendering many contact views
 
