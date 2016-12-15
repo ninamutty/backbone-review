@@ -5,17 +5,19 @@ import Backbone from 'backbone';
 const TripView = Backbone.View.extend({
   initialize: function() {
     this.template = _.template(Backbone.$('#tmpl-trip-card').html());
-    this.detailsTemplate = _.template(Backbone.$('#tmpl-trip-details').html());
   },
 
   events: {
-    'one .trip-name': 'showDetails'
+    'click': 'onClick'
   },
 
-  showDetails: function(){
-    const cardDetails = this.detailsTemplate(this.model.attributes);
-    this.$el.append(cardDetails);
-    console.log("hello");
+  onClick: function(e) {
+    this.trigger('select', this);
+
+    // We return false to tell jQuery not to run any more event handlers.
+    // Otherwise, it would run the 'click' event handler on RolodexView
+    // as well.
+    return false;
   },
 
   render: function(){
