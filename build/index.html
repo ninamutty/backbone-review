@@ -4,25 +4,50 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <nav>
+      <h1> Trek </h1>
+      <a href="#addtrip"> Add a Trip </a>
+    </nav>
     <main>
       <h2> Trips  </h2>
       <ul id="trip-cards"></ul>
       <section id="trip-details"></section>
     </main>
 
+
+
+    <section>
+      <h3>Add A New Trip</h3>
+      <a name="addtrip"></a>
+      <form>
+        <label for="name"> Name of Trip: </label>
+        <input type="text" name="name">
+
+        <label for="continent"> Continent: </label>
+        <input type="text" name="continent">
+
+        <label for="name"> Spots Available: </label>
+        <input type="number" name="spots">
+
+        <label for="name"> Cost of Trip: </label>
+        <input type="number" name="cost">
+
+        <button type="submit"> Submit </button>
+      </form>
+
+    </section>
+
     <!-- Underscore Templates -->
     <script type="text/template" id="tmpl-trip-card">
       <li>
-        <h3><%- name %></h3>
+        <h3 class="trip-name"><%- name %></h3>
         <h4><%- continent %></h4>
-        <h4>$<%- cost %></h4>
       </li>
     </script>
 
     <script type="text/template" id="tmpl-trip-details">
-      <h3><%- name %></h3>
-      <h4><%- continent %></h4>
-      <h4><%- cost %></h4>
+      <h4>Cost: $<%- cost %></h4>
+      <h4>Spots Available: $<%- spots %></h4>
     </script>
 
 
