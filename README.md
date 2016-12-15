@@ -158,8 +158,8 @@ It can be difficult to figure out when functions get called when we're listening
 
 Using a whiteboard make a list of the DOM events each of the views are listening to and draw arrows to functions that the events trigger.  
 
--  When Button, 'See All Trips', is clicked
--  When button, 'Make Reservation', is clicked
+-  When button 'See All Trips' is clicked
+-  When button 'Make Reservation' is clicked
 
 ![image of a DOM Event linked to a function](images/diagramEvents.png)
 
