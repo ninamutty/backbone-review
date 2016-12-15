@@ -132,6 +132,7 @@ Each of the following views should correspond to a color. ex: trip view is yello
 
 ## Tracing Events
 
+**Activity**
 It can be difficult to figure out when functions get called when we're listening to events and there's not one line of execution to follow.  Now you and your partner will be diving into the events and the functions listening to those events in this Trek App.  
 
 ### DOM Events
