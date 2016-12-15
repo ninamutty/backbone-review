@@ -81,6 +81,7 @@ We will utilize them a lot more with Tic-Tac-Toe, and that lesson will come on M
 
 ### Collections
 
+Collections are ordered groups of Models, they normally communicate with APIs for CRUD operations and let a view know of changes with the `add`, `update` and other events.  
 
 ### That Other stuff
 Because our Backbone application relies on a few other libraries to get it's gear'a'grinding, we have a json file that keeps track of those libraries and will include them into our project when we run `npm install`.
