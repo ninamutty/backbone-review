@@ -1,16 +1,20 @@
 # Backbone Review
 
-(add) INTENTION: think about bigger picture, not about just making a backbone app
+## Intention
+Let's think about the types of applications that we have built using JavaScript thus far. Scrabble was a basic functional program, but didn't really have any front-end component that did DOM manipulation or eventing. Trek was a nice SPA that used AJAX to interact with an API and jQuery events to provide much of the functionality. These types of applications were fairly small with not a lot of features or components that were difficult to keep track of.
 
-Review what we have learned so far with Backbone by going over the essential components and
+Let's say that Trek had 5 times as many features that were built with similar interactions with APIs and events. This would be much harder to keep track of utilizing the unstructured process we were using originally. **This is where we will see the greatest use-case for utilizing Backbone as our JS library.**
 
-This repo includes a completed Backbone application version of Trek that we will refer to for the activities.
+## Setup
+This repo includes a completed Backbone application version of Trek that we will refer to for these activities.
 
-**Fork and clone this repository to follow along.**
+You should **fork and clone this repository to follow along.**
 
 ***
 
 ## 1) Review Components
+![Backbone JS Architecture from http://www.slideshare.net/ronreiter/writing-html5-web-apps-using-backbonejs-and-gae](backbonejs-architecture.jpg)
+
 Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
 - [Model](#model)
