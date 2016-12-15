@@ -1,5 +1,7 @@
 # Backbone Review
 
+(add) INTENTION: think about bigger picture, not about just making a backbone app
+
 Review what we have learned so far with Backbone by going over the essential components and
 
 This repo includes a completed Backbone application version of Trek that we will refer to for the activities.
@@ -82,7 +84,9 @@ If this process sounds familiar, it's because it's basically the same as having 
 
 - **Webpack**
 
+- **Underscore**
 
+- **JQuery** Anytime you see that money sign, you're working with a Jquery object. That Jquery object is set by referring to a
 
 ***
 
@@ -133,3 +137,10 @@ Cut out the squares and put the segments of code in order in which they are ran,
 When the page initially loads, there is a lot of code in various parts of our application that are depended on to make sure it all comes together.
 
 - On page load
+
+
+##4) Would this be a backbone app?
+
+
+Soundcloud.com
+HTML5zombo.com
