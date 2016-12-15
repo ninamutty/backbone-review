@@ -90,14 +90,16 @@ App.js is our starting file for execution.  It creates the models & our Applicat
 
 ### Views
 - **ApplicationView** was the most arbitrary. Why is it there?
-  - The ApplicationView controls the whole viewport and handles the form for creating new Contacts.
+  - The ApplicationView controls the whole viewport and handles the form for creating new Contacts. It also directly manages the RolodexView instance.
 - **RolodexView**
-  - The RolodexView manages the list of Contacts and listens for events on the collection and when individual cards are selected.  When a card is selected it triggers an event which the Rolodex listens to.  Then the Rolodex updates the modal to show the contact details.  
+  - The RolodexView manages the list of Contacts and listens for events on the collection and when individual cards are selected.  When a card is selected it triggers an event which the Rolodex listens to.  Then the Rolodex updates the modal to show the contact details. It also directly manages all of the ContactViews instances.
 - **ContactView**
-  - A ContactView renders one Contact Model using an underscore template.  
+  - A ContactView renders one Contact Model using an Underscore template.
 
 
-Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular <DIV> element, while the RolodexView does not interact with the form.  
+Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular <DIV> element, while the RolodexView does not interact with the form.
+
+Likewise, when one view directly manages another view (such as with the RolodexView and its ContactViews) that view effectively _delegates_ responsbility for some of its DOM elements to the _child_ view. The RolodexView does not directly change the HTML within any of the <DIV> elements assigned to ContactViews.
 
 ### Models
 
