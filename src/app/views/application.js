@@ -21,7 +21,7 @@ const ApplicationView = Backbone.View.extend({
       cost: this.$('#trip-form input[name="cost"]').val()
     };
 
-    this.model.trips.add(contactAttrs);
+    this.model.tripsList.add(tripAttrs);
     this.clearForm();
   },
 
@@ -30,7 +30,7 @@ const ApplicationView = Backbone.View.extend({
   },
 
   clearForm: function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.$('#trip-form input').val('');
   },
 

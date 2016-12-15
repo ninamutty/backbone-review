@@ -5,6 +5,7 @@ import TripView from 'app/views/trip_view';
 const TripListView = Backbone.View.extend({
   initialize: function(){
 
+    this.listenTo(this.model, 'update', this.render);
   },
 
 
