@@ -27,7 +27,7 @@ The model will hold our applications business logic code.
 ### Collection
 Handles a group of related models.
 
-[Backbone.collection Documenation](http://backbonejs.org/#Collection)
+[Backbone.collection Documentation](http://backbonejs.org/#Collection)
 
 ### View
 
@@ -40,12 +40,12 @@ You should always design your Backbone Views so that they never modify DOM eleme
 
 Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, such as to get the content for a template.
 
-[Backbone.view Documenation](http://backbonejs.org/#View)
+[Backbone.view Documentation](http://backbonejs.org/#View)
 
 ### Events
 Defined inside of Backbone.views
 
-[Backbone.events Documenation](http://backbonejs.org/#Events)
+[Backbone.events Documentation](http://backbonejs.org/#Events)
 
 **Activity:** List all the components of Trek
 List all of the components
