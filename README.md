@@ -1,16 +1,19 @@
 # Backbone Review
 
-(add) INTENTION: think about bigger picture, not about just making a backbone app
+## Intention
+Let's think about the types of applications that we have built using JavaScript thus far. Scrabble was a basic functional program, but didn't really have any front-end component that did DOM manipulation or eventing. Trek was a nice SPA that used AJAX to interact with an API and jQuery events to provide much of the functionality. These types of applications were fairly small with not a lot of features or components that were difficult to keep track of.
 
-Review what we have learned so far with Backbone by going over the essential components and
+Let's say that Trek had 5 times as many features that were built with similar interactions with APIs and events. This would be much harder to keep track of utilizing the unstructured process we were using originally. **This is where we will see the greatest use-case for utilizing Backbone as our JS library.**
 
-This repo includes a completed Backbone application version of Trek that we will refer to for the activities.
+## Setup
+This repo includes a completed Backbone application version of Trek that we will refer to for these activities.
 
-**Fork and clone this repository to follow along.**
+You should **fork and clone this repository to follow along.**
 
 ***
 
 ## 1) Backbone Components Overview
+![Backbone JS Architecture from http://www.slideshare.net/ronreiter/writing-html5-web-apps-using-backbonejs-and-gae](backbonejs-architecture.jpg)
 Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
 - [Model](#model)
@@ -19,37 +22,51 @@ Below are the Backbone components we have focused on to build our single page ap
 - [Events](#events)
 
 ### Model
-Models are
-
-The model will hold our applications business logic code.
-[Backbone.model Documentation](http://backbonejs.org/#Model)
+Models are the component of our Backbone application which retrieves and populates the data. Models also contain our applications business logic.
 
 ### Collection
-Handles a group of related models.
-
-[Backbone.collection Documentation](http://backbonejs.org/#Collection)
+Collections handle a group of related models. When initially thinking about a collection, they may seem like simply a list, but they are much more powerful. Collections are useful because they can allow you to listen for (and act on) events that occur on any model within the collection.
 
 ### View
+Views act as the HTML representation of your Backbone Models. Views have much more power than Views in our Rails applications. Views act as the broker between the data in our application and the HTML displayed to the user.
 
+The two main purposes of views are:
+- Templating (rendering HTML)
+- Eventing (triggering and handling events)
+
+##### Clarifications on Views
 **Notes on `el` `$el` and `this.$`:**
-- **`el`:** A View's `el` property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
-- **`$el`:** The jQuery wrapper around the View's `el` property. It gives you easy access to jQuery methods like `show()`, `hide()` and `addClass()`.
+- **`el`:** A View's `el` property is it's _DOM element_. Every view has **one** and by default, unless otherwise defined, it is a `div` element.
+- **`$el`:** The _jQuery wrapper_ around the View's `el` property. It gives you easy access to jQuery methods like `show()`, `hide()` and `addClass()`.
 - **`this.$`:** The jQuery selector function, [_scoped_](http://api.jquery.com/jquery/#selector-context) to only search within the children of the View's DOM element. This allows you to make selector calls and be certain that you're not affecting any parts of the page outside of your View's responsibility.
 
 You should always design your Backbone Views so that they never modify DOM elements that aren't children of `el`. The easiest way to make sure that your Views hold to that design is to **only ever use `this.$` and `$el` to modify the page**.
 
-Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, such as to get the content for a template.
+Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, when you might need to get the content for a template.
+
+
+### Events
+Events are defined inside of your Views. We can utilize three different types of events to create a truly dynamic site.
+
+**DOM Events**: These are events that are triggered within our `events: {}` or `on` code in the View. These events occur when there is something directly happening in the DOM.
+
+**Custom Events**: These are events which we can create ourselves by extending `Backbone.Events`.
+
+**Backbone Events**: These are _technically_ custom events which Backbone has created for us based on common things that we need to do in a Backbone application. These are things like `add`, `update`, and `remove` on models and collections.
+
+#### Documentation
+[Backbone.model Documentation](http://backbonejs.org/#Model)
+
+[Backbone.collection Documentation](http://backbonejs.org/#Collection)
 
 [Backbone.view Documentation](http://backbonejs.org/#View)
 
-### Events
-Defined inside of Backbone.views
-
 [Backbone.events Documentation](http://backbonejs.org/#Events)
 
-**Activity:** List all the components of Trek
-List all of the components
+[Backbone built-in events](http://backbonejs.org/#Events-catalog)
 
+**Activity:**
+Go through the Trek application and list out each individual component. Use the diagram above to help you label each component as Model, View or Collection.
 
 ***
 
@@ -125,28 +142,27 @@ The below activities practice understanding how the components interact with eac
 
 ### Rendering Views
 
-**The structure of our HTML has hierarchy** When an HTML element is nested inside of another element, the outer-most element has a higher hierarchy. That outer-element acts as a container for it's inner-elements.
+**The structure of our HTML has hierarchy** All HTML elements are nested inside of **one** other element, other than the `<HTML>` tag. The *parent* element acts as a container for it's nested *child* elements.
 
-Some backbone views will be responsible for other views and act as a container with hierarchy over the inner-elements that are generated from the views.
+Backbone views can have the same relationship, and generally mirror the HTML's hierarchy. Some backbone views will be responsible for *child* views and act as a container with hierarchy over the inner-elements that are generated from those *child* views. For example, in the Rolodex project, the rolodex view was responsible for rendering many contact views.
 
-For example, in the Rolodex project, the Rolodex view was responsible for rendering many contact views
-
-
-With our application, a single page will likely have many different Backbone views rendering as once.
+With our Backbone applications, a single page will likely have many different Backbone views rendering at once.
 
 
 **Activity:** Views Responsibility
 
-With this activity, we will get more comfortable recognizing the code that is
+With this activity, we will identify what sections of the DOM map to specific views.
 
-Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the code that corresponds to that view, including view files, html
+Each of the following views should correspond to a color (or other distinct marking, like dashed lines).
+**ex:** tripView is yellow, tripListView is blue and appView is red.
 
+On the worksheet, use that color to draw a square around all the code snippets that correspond to each of these views:
 
-- trip view
-- trip_list view
-- app view
+- tripView
+- tripListView
+- appView
 
-
+Once you have finished, compare your worksheet with a neighbor. Review the code together and come to a consensus.
 
 ### Initial Page Load
 **Activity:**
@@ -203,11 +219,11 @@ Now cause the events to trigger, for example click on a trip, or add a reservati
 ## 4) Would this be a backbone app?
 
 For each of the following websites, take a minute or so to look over the page's design, determine whether or not it would make sense to build the site as a Backbone application, and write down your reasoning for that determination:
- +
- +* [SoundCloud](https://soundcloud.com/)
- +* [Zombo.com](https://html5zombo.com/)
- +* [Gmail](https://gmail.com/) (the actual email interface)
- +* [YouTube](https://youtube.com/)
- +* [Cachemonet](http://cachemonet.com/)
- +* [Zoomquilt](http://zoomquilt.org/)
- +* [APIdock](http://apidock.com/ruby)
+
+* [SoundCloud](https://soundcloud.com/)
+* [Zombo.com](https://html5zombo.com/)
+* [Gmail](https://gmail.com/) (the actual email interface)
+* [YouTube](https://youtube.com/)
+* [Cachemonet](http://cachemonet.com/)
+* [Zoomquilt](http://zoomquilt.org/)
+* [APIdock](http://apidock.com/ruby)
