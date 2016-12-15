@@ -158,7 +158,7 @@ We'll include all events here, not just custom ones.
 | Click on `Clear` button  | DOM                | The user      | ApplicationView      |
 | Click on a contact card  | DOM                | The user      | ContactView          |
 | Click off a contact card | DOM                | The user      | RolodexView          |
-| `update` the Rolodex     | Backbone Automatic | Backbone when the collection is updated. Updates come from ApplicationView (add a contact) | RolodexView |
+| `update` the Rolodex     | Backbone Automatic | Rolodex (the collection). Updates come from ApplicationView (add a contact) | RolodexView |
 | `select` a contact card  | Custom             | ContactView when the card is clicked | RolodexView |
 
 Is anything missing from this list that you used in your version of Rolodex?
