@@ -10,7 +10,7 @@ This repo includes a completed Backbone application version of Trek that we will
 
 ***
 
-## 1) Review Components
+## 1) Backbone Components Overview
 Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
 - [Model](#model)
@@ -53,20 +53,23 @@ List all of the components
 
 ***
 
-## 2) How we have structured our Backbone applications
+## 2) Rolodex Structure - Review
+
 The point of Backbone is to provide a very intentional structure to our front-end code, so that we know where to find the code that is handling the specific functionality of our application.
 
 With Backbone being a less opinionated library/framework, it also has less rules and conventions on how to organize your application and where you implement specific functionality.  
 
-We'll take a look at a sample Rolodex solution.  
+We'll take a look at a [sample Rolodex solution.](https://github.com/Hamled/rolodex/tree/Hamled/impl)
 
-Fork & Clone this [repository.](https://github.com/Hamled/rolodex/tree/Hamled/impl).
+If you choose to Fork & Clone this [repository.](https://github.com/Hamled/rolodex/tree/Hamled/impl).
 
-Then execute:
+Then you'll need to execute:
 ```bash
 $  git fetch
 $  git checkout impl
 ```
+
+Because the solution is on the impl branch.
 
 To get our solution to Rolodex for examination.  
 
@@ -113,7 +116,7 @@ If this process sounds familiar, it's because it's basically the same as having 
 
 ***
 
-## 3) Review How the Components Interact with Each Other
+## 3) Looking at Trek-Backbone How Elements Interact
 Each component is responsible for specific functionality of our application. These components rely on each other, which can quickly complicate how data flows through our application.
 
 The below activities practice understanding how the components interact with each other.
