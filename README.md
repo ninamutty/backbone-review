@@ -99,9 +99,9 @@ App.js is our starting file for execution.  It creates the models & our Applicat
   - A ContactView renders one Contact Model using an Underscore template.
 
 
-Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular <DIV> element, while the RolodexView does not interact with the form.
+Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular `<DIV>` element, while the RolodexView does not interact with the form.
 
-Likewise, when one view directly manages another view (such as with the RolodexView and its ContactViews) that view effectively _delegates_ responsbility for some of its DOM elements to the _child_ view. The RolodexView does not directly change the HTML within any of the <DIV> elements assigned to ContactViews.
+Likewise, when one view directly manages another view (such as with the RolodexView and its ContactViews) that view effectively _delegates_ responsbility for some of its DOM elements to the _child_ view. The RolodexView does not directly change the HTML within any of the `<DIV>` elements assigned to ContactViews.
 
 ### Models
 
