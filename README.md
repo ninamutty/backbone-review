@@ -12,9 +12,8 @@ You should **fork and clone this repository to follow along.**
 
 ***
 
-## 1) Review Components
+## 1) Backbone Components Overview
 ![Backbone JS Architecture from http://www.slideshare.net/ronreiter/writing-html5-web-apps-using-backbonejs-and-gae](backbonejs-architecture.jpg)
-
 Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
 - [Model](#model)
@@ -71,31 +70,53 @@ Go through the Trek application and list out each individual component. Use the 
 
 ***
 
-## 2) How we have structured our Backbone applications
-The point of backbone is to provide a very intentional structure to our front-end code, so that we know where to find the code that is handling the specific functionality of our application.
+## 2) Rolodex Structure - Review
 
-With Backbone being a less opinionated library/framework, it also has less rules and conventions on
+The point of Backbone is to provide a very intentional structure to our front-end code, so that we know where to find the code that is handling the specific functionality of our application.
 
+With Backbone being a less opinionated library/framework, it also has less rules and conventions on how to organize your application and where you implement specific functionality.  
+
+We'll take a look at a [sample Rolodex solution.](https://github.com/Hamled/rolodex/tree/Hamled/impl)
+
+If you choose to Fork & Clone this [repository.](https://github.com/Hamled/rolodex/tree/Hamled/impl).
+
+Then you'll need to execute:
+```bash
+$  git fetch
+$  git checkout impl
+```
+
+Because the solution is on the impl branch.
+
+To get our solution to Rolodex for examination.  
 
 ### App.js
-
+App.js is our starting file for execution.  It creates the models & our ApplicationView to start the page.  
 
 ### Views
-- **application_view** was the most arbitrary. Why is it there?
-- **contact_view**
-- **rolodex_view**
+- **ApplicationView** was the most arbitrary. Why is it there?
+  - The ApplicationView controls the whole viewport and handles the form for creating new Contacts.
+- **RolodexView** 
+  - The RolodexView manages the list of Contacts and listens for events on the collection and when individual cards are selected.  When a card is selected it triggers an event which the Rolodex listens to.  Then the Rolodex updates the modal to show the contact details.  
+- **ContactView**
+  - A ContactView renders one Contact Model using an underscore template.  
 
+
+Notice that our views only directly interact with DOM elements inside their areas of concern.  So the Cards only change HTML within their particular <DIV> element, while the RolodexView does not interact with the form.  
 
 ### Models
 
-Right now our models have done very little. We have used them to set defaults.
+Right now our models & collections have done very little. We have used them to set defaults.  Our Contact Model only stores contact information, no business logic or functions.  
 
-Then can also...
+Models can also connect to APIs CRUD operations, provide business logic and let Views know when the data has changed with Events.  
 
-We will utilize them a lot more with Tic-Tac-Toe, and that lesson will come on Monday.
+We will utilize them a lot more with Tic-Tac-Toe, and that lesson will come on Monday.  Yippie!
 
 ### Collections
 
+Collections are ordered groups of Models, they normally communicate with APIs for CRUD operations and let a view know of changes with the `add`, `update` and other events.  
+
+Our Rolodex here only uses the Collection's Eventing in this application.  
 
 ### That Other stuff
 Because our Backbone application relies on a few other libraries to get it's gear'a'grinding, we have a json file that keeps track of those libraries and will include them into our project when we run `npm install`.
@@ -104,15 +125,15 @@ To add more libraries, or to see which ones are already included, open the `pack
 
 If this process sounds familiar, it's because it's basically the same as having a gem file in rails and running *'bundle install'*.
 
-- **Webpack**
+- **Webpack**  Webpack lets us have a local webserver to run our app, translate our latest JavaScript syntax to something the browser can understand with **babel** and bundle our dependencies together into a single JavaScript file.
 
-- **Underscore**
+- **Underscore** When you see an `_.` you're dealing with an underscore function.  Underscore provides a bunch or useful functions to use with Backbone, but we'll mainly focus on templating.  
 
-- **JQuery** Anytime you see that money sign, you're working with a Jquery object. That Jquery object is set by referring to a
+- **JQuery** Anytime you see that money sign, you're working with a Jquery object. That Jquery object is set by referring to a CSS selector for example $('body') to select the body element of the DOM.
 
 ***
 
-## 3) Review How the Components Interact with Each Other
+## 3) Looking at Trek-Backbone How Elements Interact
 Each component is responsible for specific functionality of our application. These components rely on each other, which can quickly complicate how data flows through our application.
 
 The below activities practice understanding how the components interact with each other.
@@ -184,7 +205,7 @@ Now look at the event handler functions, do they invoke other events or function
 
 ### Backbone Events
 
-Look at the listenTo calls in the initialize functions.  Are any of the views listening to events on other objects, such as Models, Collections or Views?
+Look at the `listenTo()` calls in the initialize functions.  Are any of the views listening to events on other objects, such as Models, Collections or Views?
 
 Diagram those events as well.
 
@@ -198,6 +219,7 @@ Now cause the events to trigger, for example click on a trip, or add a reservati
 
 
 ## 4) Would this be a backbone app?
+
 For each of the following websites, take a minute or so to look over the page's design, determine whether or not it would make sense to build the site as a Backbone application, and write down your reasoning for that determination:
 
 * [SoundCloud](https://soundcloud.com/)
