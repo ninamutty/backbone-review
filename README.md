@@ -125,25 +125,24 @@ The below activities practice understanding how the components interact with eac
 
 **The structure of our HTML has hierarchy** When an HTML element is nested inside of another element, the outer-most element has a higher hierarchy. That outer-element acts as a container for it's inner-elements.
 
-Some backbone views will be responsible for other views and act as a container with hierarchy over the inner-elements that are generated from the views.
-
-For example, in the Rolodex project, the Rolodex view was responsible for rendering many contact views
+Some backbone views will be responsible for other views and act as a container with hierarchy over the inner-elements that are generated from the views. For example, in the Rolodex project, the Rolodex view was responsible for rendering many contact views
 
 
-With our application, a single page will likely have many different Backbone views rendering as once.
+With our Backbone applications, a single page will likely have many different Backbone views rendering as once.
 
 
 **Activity:** Views Responsibility
 
-With this activity, we will get more comfortable recognizing the code that is
+With this activity, we will get more comfortable recognizing the code that is responsible for rendering all the different HTML elements.
 
-Each of the following views should correspond to a color. ex: trip view is yellow, trip_lis view is blue and app view is red. Use that color to draw a square around all the code that corresponds to that view, including view files, html
+Each of the following views should correspond to a color.
+**ex:** trip_view is yellow, trip_list_view is blue and app view is red.
 
+On the worksheets, use that color to draw a square around all the code snippets that correspond to that view.
 
-- trip view
-- trip_list view
-- app view
-
+- trip_view
+- trip_list_view
+- app_view
 
 
 ### Initial Page Load
