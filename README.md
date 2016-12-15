@@ -1,16 +1,18 @@
 # Backbone Review
 Today we'll be doing a review of Backbone. This is important, because tomorrow we'll be modifying your tic-tac-toe program to use a Backbone front-end.
 
-This review will have three sections:
+This review will have four sections:
 
 1. General Backbone review
 1. Looking back at Rolodex, and Charles' implementation
 1. Looking at a new Backbone site (this repo)
+1. Evaluating whether real sites might use Backbone
 
 ***
 
 ## 1) Backbone Components Overview
 ![Backbone JS Architecture from http://www.slideshare.net/ronreiter/writing-html5-web-apps-using-backbonejs-and-gae](backbonejs-architecture.jpg)
+
 Below are the Backbone components we have focused on to build our single page applications. Each component has a brief explanation along with a link to it's documentation.
 
 - [Model](#model)
@@ -163,7 +165,7 @@ Is anything missing from this list that you used in your version of Rolodex?
 
 ***
 
-## 3) Looking at Trek-Backbone How Elements Interact
+## 3) Looking at Trek-Backbone: How Elements Interact
 
 ### Intention
 Let's think about the types of applications that we have built using JavaScript thus far. Scrabble was a basic functional program, but didn't really have any front-end component that did DOM manipulation or eventing. Trek was a nice SPA that used AJAX to interact with an API and jQuery events to provide much of the functionality. These types of applications were fairly small with not a lot of features or components that were difficult to keep track of.
