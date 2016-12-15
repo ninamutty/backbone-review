@@ -23,31 +23,36 @@ Below are the Backbone components we have focused on to build our single page ap
 - [Events](#events)
 
 ### Model
-Models are
+Models are the component of our Backbone application which retrieves and populates the data. Models also contain our applications business logic.
 
-The model will hold our applications business logic code.
 [Backbone.model Documentation](http://backbonejs.org/#Model)
 
 ### Collection
-Handles a group of related models.
+Collections handle a group of related models. When initially thinking about a collection, they may seem like simply a list, but they are much more powerful. Collections are useful because they can allow you to listen for (and act on) events that occur on any model within the collection.
 
 [Backbone.collection Documentation](http://backbonejs.org/#Collection)
 
 ### View
+Views act as the HTML representation of your Backbone Models. Views have much more power than Views in our Rails applications. Views act as the broker between the data in our application and the HTML displayed to the user.
 
+The two main purposes of views are:
+- Templating (rendering HTML)
+- Eventing (triggering and handling events)
+
+##### Clarifications on Views
 **Notes on `el` `$el` and `this.$`:**
-- **`el`:** A View's `el` property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
-- **`$el`:** The jQuery wrapper around the View's `el` property. It gives you easy access to jQuery methods like `show()`, `hide()` and `addClass()`.
+- **`el`:** A View's `el` property is it's _DOM element_. Every view has **one** and by default, unless otherwise defined, it is a `div` element.
+- **`$el`:** The _jQuery wrapper_ around the View's `el` property. It gives you easy access to jQuery methods like `show()`, `hide()` and `addClass()`.
 - **`this.$`:** The jQuery selector function, [_scoped_](http://api.jquery.com/jquery/#selector-context) to only search within the children of the View's DOM element. This allows you to make selector calls and be certain that you're not affecting any parts of the page outside of your View's responsibility.
 
 You should always design your Backbone Views so that they never modify DOM elements that aren't children of `el`. The easiest way to make sure that your Views hold to that design is to **only ever use `this.$` and `$el` to modify the page**.
 
-Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, such as to get the content for a template.
+Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, when you might need to get the content for a template.
 
 [Backbone.view Documentation](http://backbonejs.org/#View)
 
 ### Events
-Defined inside of Backbone.views
+Events are defined inside of your Views. We can utilize DOM Events and Custom Events to create a truly dynamic site. 
 
 [Backbone.events Documentation](http://backbonejs.org/#Events)
 
