@@ -128,6 +128,25 @@ Each of the following views should correspond to a color. ex: trip view is yello
 
 
 
+### Initial Page Load
+**Activity:**
+Some of our JavaScript is run immediately when the page loads, and some of it doesn't run until the user does something. To help understand which is which and in what order various things happen, let's leave ourselves a trail of breadcrumbs to follow. We'll start by looking at what does and doesn't happen when the page is first loaded.
+
+To do so, we'll add a log line to the top of every function in our TREK app. Each line should be of form
+
+```javascript
+console.log(">>> BREADCRUMBS: #");
+```
+
+Where `#` is the order in which the log line appears when the app is started. If the function shouldn't be called when the page is first loaded, replace `#` with `does not print`. So the first line to be printed out should look like
+
+```javascript
+console.log(">>> BREADCRUMBS: 1");
+```
+
+Did things appear in the order you expected? Did you get any `does not print`s? Check in with the person next to you and verify, then revise your numbering if needed.
+
+Now change your numbering to reflect the order that functions are called when various buttons are pressed.
 
 
 ## Tracing Events
@@ -156,29 +175,10 @@ Diagram those events as well.
 
 Now cause the events to trigger, for example click on a trip, or add a reservation.  
 
--  Put a console log message in each Event Listener printing out the function name.  Then 'trigger' the event.  
+-  Look at the console log messages you put in earlier for the Page Load activity.
 -  Did they print? Were they in the expected order?  Why or why not?
 -  How many events did you identify?  Check with a neighbor to see if they have the same.  
 
-### Initial Page Load
-**Activity:**
-Some of our JavaScript is run immediately when the page loads, and some of it doesn't run until the user does something. To help understand which is which and in what order various things happen, let's leave ourselves a trail of breadcrumbs to follow. We'll start by looking at what does and doesn't happen when the page is first loaded.
-
-To do so, we'll add a log line to the top of every function in our TREK app. Each line should be of form
-
-```javascript
-console.log(">>> BREADCRUMBS: #");
-```
-
-Where `#` is the order in which the log line appears when the app is started. If the function shouldn't be called when the page is first loaded, replace `#` with `does not print`. So the first line to be printed out should look like
-
-```javascript
-console.log(">>> BREADCRUMBS: 1");
-```
-
-Did things appear in the order you expected? Did you get any `does not print`s? Check in with the person next to you and verify, then revise your numbering if needed.
-
-Now change your numbering to reflect the order that functions are called when various buttons are pressed.
 
 ## 4) Would this be a backbone app?
 
