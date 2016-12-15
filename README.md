@@ -27,21 +27,25 @@ The model will hold our applications business logic code.
 ### Collection
 Handles a group of related models.
 
-[Backbone.collection Documenation](http://backbonejs.org/#Collection)
+[Backbone.collection Documentation](http://backbonejs.org/#Collection)
 
 ### View
 
-**Notes on el and $el:**
-- **el:** A view's .el property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
-- **$el:** A cached jquery object so that you
-It gives you access to jquery methods like `.show()`, `.hide()` and `.addClass()`
+**Notes on `el` `$el` and `this.$`:**
+- **`el`:** A View's `el` property is it's DOM element. Every view has one and by default, unless otherwise defined, is a div element.
+- **`$el`:** The jQuery wrapper around the View's `el` property. It gives you easy access to jQuery methods like `show()`, `hide()` and `addClass()`.
+- **`this.$`:** The jQuery selector function, [_scoped_](http://api.jquery.com/jquery/#selector-context) to only search within the children of the View's DOM element. This allows you to make selector calls and be certain that you're not affecting any parts of the page outside of your View's responsibility.
 
-[Backbone.view Documenation](http://backbonejs.org/#View)
+You should always design your Backbone Views so that they never modify DOM elements that aren't children of `el`. The easiest way to make sure that your Views hold to that design is to **only ever use `this.$` and `$el` to modify the page**.
+
+Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, such as to get the content for a template.
+
+[Backbone.view Documentation](http://backbonejs.org/#View)
 
 ### Events
 Defined inside of Backbone.views
 
-[Backbone.events Documenation](http://backbonejs.org/#Events)
+[Backbone.events Documentation](http://backbonejs.org/#Events)
 
 **Activity:** List all the components of Trek
 List all of the components
