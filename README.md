@@ -1,14 +1,11 @@
 # Backbone Review
+Today we'll be doing a review of Backbone. This is important, because tomorrow we'll be modifying your tic-tac-toe program to use a Backbone front-end.
 
-## Intention
-Let's think about the types of applications that we have built using JavaScript thus far. Scrabble was a basic functional program, but didn't really have any front-end component that did DOM manipulation or eventing. Trek was a nice SPA that used AJAX to interact with an API and jQuery events to provide much of the functionality. These types of applications were fairly small with not a lot of features or components that were difficult to keep track of.
+This review will have three sections:
 
-Let's say that Trek had 5 times as many features that were built with similar interactions with APIs and events. This would be much harder to keep track of utilizing the unstructured process we were using originally. **This is where we will see the greatest use-case for utilizing Backbone as our JS library.**
-
-## Setup
-This repo includes a completed Backbone application version of Trek that we will refer to for these activities.
-
-You should **fork and clone this repository to follow along.**
+1. General Backbone review
+1. Looking back at Rolodex, and Charles' implementation
+1. Looking at a new Backbone site (this repo)
 
 ***
 
@@ -153,20 +150,31 @@ The RolodexView and all ContactViews.
 
 We'll include all events here, not just custom ones.
 
-| Event | Type | What Triggers | What Handles/Listens|
-|:------|:-----|:--------------|:--------------------|
-| Click on `Save` button | DOM | The user | ApplicationView |
-| Click on `Clear` button | DOM | The user | ApplicationView |
-| Click on a contact card | DOM | The user | ContactView |
-| Click off a contact card | DOM | The user | RolodexView |
-| `update` the Rolodex | Backbone Automatic | Backbone when the collection is updated. Updates come from ApplicationView (add a contact) | RolodexView |
-| `select` a contact card | Custom | ContactView when the card is clicked | RolodexView |
+| Event                    | Type               | What Triggers | What Handles/Listens |
+|:-------------------------|:-------------------|:--------------|:---------------------|
+| Click on `Save` button   | DOM                | The user      | ApplicationView      |
+| Click on `Clear` button  | DOM                | The user      | ApplicationView      |
+| Click on a contact card  | DOM                | The user      | ContactView          |
+| Click off a contact card | DOM                | The user      | RolodexView          |
+| `update` the Rolodex     | Backbone Automatic | Backbone when the collection is updated. Updates come from ApplicationView (add a contact) | RolodexView |
+| `select` a contact card  | Custom             | ContactView when the card is clicked | RolodexView |
 
 Is anything missing from this list that you used in your version of Rolodex?
 
 ***
 
 ## 3) Looking at Trek-Backbone How Elements Interact
+
+### Intention
+Let's think about the types of applications that we have built using JavaScript thus far. Scrabble was a basic functional program, but didn't really have any front-end component that did DOM manipulation or eventing. Trek was a nice SPA that used AJAX to interact with an API and jQuery events to provide much of the functionality. These types of applications were fairly small with not a lot of features or components that were difficult to keep track of.
+
+Let's say that Trek had 5 times as many features that were built with similar interactions with APIs and events. This would be much harder to keep track of utilizing the unstructured process we were using originally. **This is where we will see the greatest use-case for utilizing Backbone as our JS library.**
+
+### Setup
+This repo includes a completed Backbone application version of Trek that we will refer to for these activities.
+
+You should **fork and clone this repository to follow along.**
+
 Each component is responsible for specific functionality of our application. These components rely on each other, which can quickly complicate how data flows through our application.
 
 The below activities practice understanding how the components interact with each other.
