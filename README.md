@@ -71,8 +71,6 @@ $  git checkout impl
 
 Because the solution is on the impl branch.
 
-To get our solution to Rolodex for examination.  
-
 ### App.js
 App.js is our starting file for execution.  It creates the models & our ApplicationView to start the page.  
 
