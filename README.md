@@ -199,7 +199,12 @@ Now cause the events to trigger, for example click on a trip, or add a reservati
 
 
 ## 4) Would this be a backbone app?
+For each of the following websites, take a minute or so to look over the page's design, determine whether or not it would make sense to build the site as a Backbone application, and write down your reasoning for that determination:
 
-
-Soundcloud.com
-HTML5zombo.com
+* [SoundCloud](https://soundcloud.com/)
+* [Zombo.com](https://html5zombo.com/)
+* [Gmail](https://gmail.com/) (the actual email interface)
+* [YouTube](https://youtube.com/)
+* [Cachemonet](http://cachemonet.com/)
+* [Zoomquilt](http://zoomquilt.org/)
+* [APIdock](http://apidock.com/ruby)
