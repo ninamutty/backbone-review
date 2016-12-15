@@ -90,11 +90,11 @@ To add more libraries, or to see which ones are already included, open the `pack
 
 If this process sounds familiar, it's because it's basically the same as having a gem file in rails and running *'bundle install'*.
 
-- **Webpack**
+- **Webpack**  Webpack lets us have a local webserver to run our app, translate our latest JavaScript syntax to something the browser can understand with **babel** and bundle our dependencies together.
 
-- **Underscore**
+- **Underscore** When you see an `_.` you're dealing with an underscore template.  Underscore provides a bunch or useful functions to use with Backbone, but we'll mainly focus on templating.  
 
-- **JQuery** Anytime you see that money sign, you're working with a Jquery object. That Jquery object is set by referring to a
+- **JQuery** Anytime you see that money sign, you're working with a Jquery object. That Jquery object is set by referring to a CSS selector for example $('body') to select the body element of the DOM.
 
 ***
 
