@@ -4,39 +4,44 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <nav>
-      <h1> Trek </h1>
-      <a href="#addtrip"> Add a Trip </a>
-    </nav>
-    <main>
-      <h2> Trips  </h2>
-      <ul id="trip-cards"></ul>
-      <section id="trip-details"></section>
-    </main>
+    <div id="application">
+      <nav>
+        <h1> Trek </h1>
+        <a href="#addtrip"> Add a Trip </a>
+      </nav>
+      <main>
+        <h2> Trips  </h2>
+        <ul id="trip-cards"></ul>
+        <section id="trip-details"></section>
+      </main>
 
 
 
-    <section>
-      <h3>Add A New Trip</h3>
-      <a name="addtrip"></a>
-      <form>
-        <label for="name"> Name of Trip: </label>
-        <input type="text" name="name">
+      <section>
+        <h3>Add A New Trip</h3>
+        <a name="addtrip"></a>
+        <form id="trip-form">
+          <label for="name"> Name of Trip: </label>
+          <input type="text" name="name">
 
-        <label for="continent"> Continent: </label>
-        <input type="text" name="continent">
+          <label for="continent"> Continent: </label>
+          <input type="text" name="continent">
 
-        <label for="name"> Spots Available: </label>
-        <input type="number" name="spots">
+          <label for="name"> Spots Available: </label>
+          <input type="number" name="spots">
 
-        <label for="name"> Cost of Trip: </label>
-        <input type="number" name="cost">
+          <label for="name"> Cost of Trip: </label>
+          <input type="number" name="cost">
 
-        <button type="submit"> Submit </button>
-      </form>
+          <button id="submit-trip"> Submit </button>
+          <br>
+        </form>
+        <button id="clear-data"> Clear </button>
 
-    </section>
+      </section>
+    </div> <!-- #application end-->
 
+    
     <!-- Underscore Templates -->
     <script type="text/template" id="tmpl-trip-card">
       <li>

@@ -9,13 +9,12 @@ const TripView = Backbone.View.extend({
   },
 
   events: {
-    'one .trip-name': 'showDetails'
+    'click .trip-name': 'showDetails'
   },
 
   showDetails: function(){
     const cardDetails = this.detailsTemplate(this.model.attributes);
-    this.$el.append(cardDetails);
-    console.log("hello");
+      this.$el.append(cardDetails);
   },
 
   render: function(){
