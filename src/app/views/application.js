@@ -29,8 +29,7 @@ const ApplicationView = Backbone.View.extend({
     this.clearForm();
   },
 
-  clearForm: function(e) {
-    // e.preventDefault();
+  clearForm: function() {
     this.$('#trip-form input').val('');
   },
 

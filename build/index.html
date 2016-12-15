@@ -45,13 +45,15 @@
 
     <!-- Underscore Templates -->
     <script type="text/template" id="tmpl-trip-card">
-      <li>
-        <h3 class="trip-name"><%- name %></h3>
+      <li class="trip-card">
+        <h3><%- name %></h3>
         <h4><%- continent %></h4>
       </li>
     </script>
 
     <script type="text/template" id="tmpl-trip-details">
+      <h3><%- name %></h3>
+      <h4><%- continent %></h4>
       <h4>Cost: $<%- cost %></h4>
       <h4>Spots Available: $<%- spots %></h4>
     </script>
