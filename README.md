@@ -132,7 +132,7 @@ With our Backbone applications, a single page will likely have many different Ba
 
 **Activity:** Views Responsibility
 
-With this activity, we will recognize what sections of the DOM map to specific views.
+With this activity, we will identify what sections of the DOM map to specific views.
 
 Each of the following views should correspond to a color (or other distinct marking, like dashed lines).
 **ex:** tripView is yellow, tripListView is blue and appView is red.
@@ -143,6 +143,7 @@ On the worksheet, use that color to draw a square around all the code snippets t
 - tripListView
 - appView
 
+Once you have finished, compare your worksheet with a neighbor. Review the code together and come to a consensus.
 
 ### Initial Page Load
 **Activity:**
