@@ -167,7 +167,7 @@ Now look at the event handler functions, do they invoke other events or function
 
 ### Backbone Events
 
-Look at the listener initialize functions.  Are any of the views listening to events on other objects, such as Models, Collections or Views?
+Look at the listenTo calls in the initialize functions.  Are any of the views listening to events on other objects, such as Models, Collections or Views?
 
 Diagram those events as well.
 
