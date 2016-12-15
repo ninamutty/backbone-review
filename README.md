@@ -25,12 +25,8 @@ Below are the Backbone components we have focused on to build our single page ap
 ### Model
 Models are the component of our Backbone application which retrieves and populates the data. Models also contain our applications business logic.
 
-[Backbone.model Documentation](http://backbonejs.org/#Model)
-
 ### Collection
 Collections handle a group of related models. When initially thinking about a collection, they may seem like simply a list, but they are much more powerful. Collections are useful because they can allow you to listen for (and act on) events that occur on any model within the collection.
-
-[Backbone.collection Documentation](http://backbonejs.org/#Collection)
 
 ### View
 Views act as the HTML representation of your Backbone Models. Views have much more power than Views in our Rails applications. Views act as the broker between the data in our application and the HTML displayed to the user.
@@ -49,16 +45,29 @@ You should always design your Backbone Views so that they never modify DOM eleme
 
 Using the standard jQuery `$` is acceptable if you need to _read_ parts of the page, when you might need to get the content for a template.
 
-[Backbone.view Documentation](http://backbonejs.org/#View)
 
 ### Events
-Events are defined inside of your Views. We can utilize DOM Events and Custom Events to create a truly dynamic site. 
+Events are defined inside of your Views. We can utilize three different types of events to create a truly dynamic site.
+
+**DOM Events**: These are events that are triggered within our `events: {}` or `on` code in the View. These events occur when there is something directly happening in the DOM.
+
+**Custom Events**: These are events which we can create ourselves by extending `Backbone.Events`.
+
+**Backbone Events**: These are _technically_ custom events which Backbone has created for us based on common things that we need to do in a Backbone application. These are things like `add`, `update`, and `remove` on models and collections.
+
+#### Documentation
+[Backbone.model Documentation](http://backbonejs.org/#Model)
+
+[Backbone.collection Documentation](http://backbonejs.org/#Collection)
+
+[Backbone.view Documentation](http://backbonejs.org/#View)
 
 [Backbone.events Documentation](http://backbonejs.org/#Events)
 
-**Activity:** List all the components of Trek
-List all of the components
+[Backbone built-in events](http://backbonejs.org/#Events-catalog)
 
+**Activity:**
+Go through the Trek application and list out each individual component. Use the diagram above to help you label each component as Model, View or Collection.
 
 ***
 
