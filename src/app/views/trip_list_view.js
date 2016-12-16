@@ -4,6 +4,7 @@ import TripView from 'app/views/trip_view';
 
 const TripListView = Backbone.View.extend({
   initialize: function(){
+    console.log(">>> BREADCRUMBS: 3");
 
     this.detailsTemplate = _.template(Backbone.$('#tmpl-trip-details').html());
     this.detailsModal = this.$('#trip-details');
@@ -13,7 +14,7 @@ const TripListView = Backbone.View.extend({
   },
 
   showDetails: function(card){
-
+    console.log(">>> BREADCRUMBS: No Print");
     const cardDetails = this.detailsTemplate(card.model.attributes);
     this.detailsModal.html(cardDetails);
     this.detailsModal.show();
@@ -21,6 +22,7 @@ const TripListView = Backbone.View.extend({
 
 
   render: function() {
+    console.log(">>> BREADCRUMBS: 4");
     const cardList = Backbone.$('#trip-cards');
     cardList.empty();
 
@@ -33,8 +35,10 @@ const TripListView = Backbone.View.extend({
 
       cardList.append(card.render().$el);
     })
+    console.log(">>> BREADCRUMBS: 2nd to last");
+    return this;
   }
-
+  // return this;
 });
 
 export default TripListView;
